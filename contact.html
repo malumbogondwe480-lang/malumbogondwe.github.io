@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - Malumbo Gondwe</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("GzYcIXZSj9Y0KgG0H"); // Your Public Key here
+    })();
+  </script>
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">Portfolio.</a>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="bx bx-menu"></i>
+    </div>
+
+    <ul id="navbar-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="service.html">Service</a></li>
+      <li class="active"><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact">
+    <div class="contact-container">
+      <h1>Get in Touch</h1>
+      <p>Have questions or want to work together? Send me a message!</p>
+
+      <div class="contact-content">
+
+        <!-- Contact Form -->
+        <form id="contact-form" class="contact-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="from_name" placeholder="Your name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="reply_to" placeholder="Your email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your message" rows="6" required></textarea>
+
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div class="info-item">
+            <i class="bx bx-envelope"></i>
+            <p>malumbogondwe480@gmail.com</p>
+          </div>
+          <div class="info-item">
+            <i class="bx bx-phone"></i>
+            <p>+265 99 788 7383</p>
+          </div>
+          <div class="info-item">
+            <i class="bx bx-phone"></i>
+            <p>+265 88 197 9480</p>
+          </div>
+          <div class="info-item">
+            <i class="bx bx-map"></i>
+            <p>Mzuzu, Malawi</p>
+          </div>
+
+          <div class="social-icons">
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JS for hamburger -->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navbarMenu = document.getElementById("navbar-menu");
+
+    menuToggle.addEventListener("click", () => {
+      navbarMenu.classList.toggle("active");
+    });
+
+    // EmailJS send form
+    const contactForm = document.getElementById('contact-form');
+
+    contactForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm('service_1wybp8o', 'template_y4krdgd', this)
+        .then(() => {
+          alert('Message sent successfully!');
+          contactForm.reset();
+        }, (error) => {
+          alert('Failed to send message. Please try again later.');
+          console.error('EmailJS error:', error);
+        });
+    });
+  </script>
+</body>
+</html>

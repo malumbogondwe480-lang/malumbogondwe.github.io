@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services - Malumbo Gondwe</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">Portfolio.</a>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="bx bx-menu"></i>
+    </div>
+
+    <ul id="navbar-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="active"><a href="service.html">Service</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- SERVICE SECTION -->
+  <section class="services">
+    <div class="services-container">
+      <h1>Services I Offer</h1>
+      <p>As a versatile developer and ICT professional, I provide a wide range of services to help bring your ideas to life.</p>
+
+      <div class="service-cards">
+
+        <div class="service-card">
+          <i class="bx bx-code-alt service-icon"></i>
+          <h3>Web Development</h3>
+          <p>Building responsive, user-friendly websites and web applications using PHP, JavaScript, and modern frameworks.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="bx bxl-flutter service-icon"></i>
+          <h3>Mobile App Development</h3>
+          <p>Creating performant cross-platform mobile apps with Flutter, tailored to your specific needs.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="bx bx-desktop service-icon"></i>
+          <h3>Desktop Applications</h3>
+          <p>Developing robust Windows desktop applications using C# for business and personal productivity.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="bx bx-database service-icon"></i>
+          <h3>Database Management</h3>
+          <p>Designing, managing, and optimizing MySQL and SQL databases for secure and efficient data handling.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="bx bx-support service-icon"></i>
+          <h3>ICT Support</h3>
+          <p>Providing technical support and troubleshooting to ensure your IT infrastructure runs smoothly.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="bx bx-chip service-icon"></i>
+          <h3>Embedded Systems</h3>
+          <p>Prototyping and programming embedded systems and IoT projects using Arduino and related technologies.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- JS for hamburger -->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navbarMenu = document.getElementById("navbar-menu");
+
+    menuToggle.addEventListener("click", () => {
+      navbarMenu.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>

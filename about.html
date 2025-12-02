@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About - Malumbo Gondwe</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">Portfolio.</a>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="bx bx-menu"></i>
+    </div>
+
+    <ul id="navbar-menu">
+      <li><a href="index.html">Home</a></li>
+      <li class="active"><a href="about.html">About</a></li>
+      <li><a href="service.html">Service</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ABOUT SECTION -->
+  <section class="about">
+    <div class="about-container">
+      <div class="about-img">
+        <img src="Malgo.jpg" alt="Malumbo Gondwe" />
+      </div>
+      <div class="about-info">
+        <h1>About Me</h1>
+        <p>
+          Hello! I'm <strong>Malumbo Gondwe</strong>, a passionate and dedicated software developer with extensive experience
+          building web, mobile, and desktop applications. I hold a Bachelor of Science with First Class Honours in Computing
+          and Information Systems from the University of Greenwich through NACIT.
+        </p>
+
+        <p>
+          My core skills include:
+        </p>
+        <ul>
+          <li>Web Development using PHP, JavaScript, and modern frameworks.</li>
+          <li>Mobile App Development with Flutter, creating cross-platform, high-performance apps.</li>
+          <li>Desktop Application Development with C# for Windows environments.</li>
+          <li>Database Management and Administration using MySQL, SQL.</li>
+          <li>ICT Support and technical troubleshooting to ensure smooth operations.</li>
+           <li>Embedded Systems Programming and Prototyping using Arduino.</li>
+        </ul>
+
+        <p>
+          I am a fast learner, highly adaptable, and committed to writing clean, efficient, and scalable code. I enjoy
+          collaborating with teams and constantly seek opportunities to grow my skills and contribute to meaningful projects.
+        </p>
+
+        <div class="btn-sci">
+          <a href="CV for Malumbo Gondwe.pdf" class="btn">Download CV</a>
+          <div class="sci">
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JS for hamburger -->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navbarMenu = document.getElementById("navbar-menu");
+
+    menuToggle.addEventListener("click", () => {
+      navbarMenu.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
