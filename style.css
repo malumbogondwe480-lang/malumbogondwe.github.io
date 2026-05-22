@@ -354,35 +354,195 @@ section h1.section-title{
   text-align:left;
 }
 
-/* ================= CTA ================= */
+/* ================= CTA SECTION ================= */
+
 .cta{
   text-align:center;
-  padding:80px 8%;
+  padding:100px 8%;
+  
+  /* NEW BACKGROUND */
+  background:linear-gradient(
+    135deg,
+    #111a2e 0%,
+    #16213e 50%,
+    #0f172a 100%
+  );
+
+  border-top:1px solid rgba(255,255,255,0.08);
+  position:relative;
+  overflow:hidden;
 }
 
-/* social */
+/* optional glow effect */
+.cta::before{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  background:rgba(0,229,255,0.08);
+  border-radius:50%;
+  top:-120px;
+  left:-100px;
+  filter:blur(40px);
+}
+
+.cta::after{
+  content:"";
+  position:absolute;
+  width:250px;
+  height:250px;
+  background:rgba(124,77,255,0.08);
+  border-radius:50%;
+  bottom:-100px;
+  right:-80px;
+  filter:blur(40px);
+}
+
+/* CONTENT ABOVE GLOW */
+.cta *{
+  position:relative;
+  z-index:2;
+}
+
+/* ================= CONNECT WITH ME ================= */
+
+.cta h2{
+  font-size:42px;
+  font-weight:700;
+  margin-bottom:20px;
+  color:#fff;
+
+  background:linear-gradient(90deg,#00e5ff,#7c4dff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+/* subtitle */
+.cta-text{
+  color:var(--muted);
+  max-width:700px;
+  margin:20px auto;
+  line-height:1.8;
+  font-size:16px;
+}
+
+/* ================= SOCIAL ICONS ================= */
+
 .sci{
   display:flex;
-  gap:12px;
   justify-content:center;
-  margin-top:15px;
+  align-items:center;
+  gap:18px;
+  margin:30px 0;
 }
 
 .sci a{
-  width:42px;
-  height:42px;
+  width:50px;
+  height:50px;
   border-radius:50%;
   display:flex;
-  align-items:center;
   justify-content:center;
-  border:1px solid rgba(255,255,255,0.2);
+  align-items:center;
+
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+
   color:var(--accent);
-  transition:0.3s;
+  font-size:22px;
+
+  transition:0.4s ease;
 }
 
 .sci a:hover{
-  background:var(--accent);
+  transform:translateY(-6px) scale(1.08);
+
+  background:linear-gradient(135deg,#00e5ff,#7c4dff);
   color:#000;
+
+  box-shadow:0 10px 25px rgba(0,229,255,0.25);
+}
+
+/* ================= QUICK LINKS ================= */
+
+.quick-links{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:15px;
+  margin-top:35px;
+}
+
+.quick-links a{
+  text-decoration:none;
+  color:#dbeafe;
+
+  padding:12px 22px;
+  border-radius:30px;
+
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+
+  transition:0.3s ease;
+  font-size:14px;
+}
+
+.quick-links a:hover{
+  background:linear-gradient(90deg,#00e5ff,#7c4dff);
+  color:#000;
+  transform:translateY(-3px);
+}
+
+/* ================= COPYRIGHT ================= */
+
+.copyright{
+  margin-top:40px;
+  color:#94a3b8;
+  font-size:14px;
+  letter-spacing:0.5px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+  .cta{
+    padding:80px 6%;
+  }
+
+  .cta h2{
+    font-size:32px;
+  }
+
+  .quick-links{
+    gap:10px;
+  }
+
+  .quick-links a{
+    width:100%;
+    max-width:220px;
+    text-align:center;
+  }
+}
+
+@media(max-width:480px){
+
+  .cta h2{
+    font-size:26px;
+  }
+
+  .cta-text{
+    font-size:14px;
+  }
+
+  .sci a{
+    width:45px;
+    height:45px;
+    font-size:20px;
+  }
 }
 
 /* ================= RESPONSIVE DESIGN ================= */
@@ -470,4 +630,34 @@ section h1.section-title{
   .section-title{
     font-size:28px;
   }
+}
+/* ================= CERTIFICATE BUTTON ================= */
+
+.cert-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+
+  margin-top:18px;
+  padding:12px 22px;
+
+  border-radius:50px;
+  text-decoration:none;
+
+  background:linear-gradient(90deg,#00e5ff,#7c4dff);
+  color:#000;
+
+  font-size:14px;
+  font-weight:600;
+
+  transition:0.3s ease;
+}
+
+.cert-btn i{
+  font-size:18px;
+}
+
+.cert-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(0,229,255,0.25);
 }
